@@ -1,16 +1,19 @@
-import { Habit } from "./components/Habit"
+//import { Habit } from "./components/Habit"
+import { Header } from './components/header'
+import { SummaryTable } from './components/SummaryTable'
+import './styles/global.css'
+import './lib/day.ts'
 
-function App() {
+
+export function App() {
   return (
-    <div>
-      <Habit completed={33}/>
-      <Habit completed={2} />
-      <Habit completed={823} />
-  </div>
+    <div className='w-screen h-screen flex justify-center items-center'>
+      <div className='w-full max-w-5xl px-6 flex flex-col gap-16'>
+        <Header/>
+        <SummaryTable/>
+      </div>  
+    </div>
   )
 }
 
-export default App
 
-// Componente: reaproveitar itens da aplicação
-// Propriedade: informação para modificar um componente visual ou comportamentalmente
